@@ -22,7 +22,7 @@ This project demonstrates different models which learn to move through a maze. C
 
 
 Package *models* contains the following models:
-1. *RandomModel* is the simplest model and just selects the next move randomly. It is [dumb all over](https://www.youtube.com/watch?v=DR_wf92A8E4) and learns nothing. You are lucky if you get to the exit using this model.
+1. *RandomModel* is the simplest model and just selects the next move randomly. It is dumb all over and learns nothing. You are lucky if you get to the exit using this model.
 2. *QTableModel* uses a table to record the value of each (state, action) pair. For a state the highest value indicates the most desirable action. These values are constantly refined during training. This is a fast way to learn a policy.
 3. *SarsaTableModel* uses a similar setup as the previous model, but takes less risk during learning (= on-policy learning).
 4. *QTableTraceModel* is an extension of the QTableModel. It speeds up learning by keeping track of previously visited state-action pairs, and updates their values as well although with a decaying rate.
